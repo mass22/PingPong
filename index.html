@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Championnat de Ping Pong Fonds FTQ</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/vue.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <h1>Championnat de Ping Pong du projet Espace Epargnant</h1>
+        </header>
+
+        <div id="main">
+                
+                <section v-if="!newGame">
+                    <button @click="newGame = !newGame">Nouvelle partie</button>
+                </section>
+                <section class="joueurs" v-if="newGame">
+                    <h2>Choisis les joueurs</h2>
+                    <section>
+                        <select v-model="selected1">
+                            <option v-for="player in players">{{ player.name }}</option>
+                        </select>
+                        <select v-model="selected2">
+                            <option v-for="player in players">{{ player.name }}</option>
+                        </select>
+                    </section>                        
+                    <section>
+                        <button @click="newGame = !newGame">Annuler</button>
+                        <button @click="addScore()">Ajouter une partie</button>
+                    </section>
+                    <section v-if="addGameScore">
+                        <input type="number" v-model="score1">
+                        <input type="number" v-model="score2">
+                        <button @click="addGame()">Ajouter une partie</button>
+                    </section>
+                </section>
+            <br><br><br>
+            <div class="classement">
+                <table>
+                    <thead>
+                        <th>Nom</th>
+                        <th>Parties jouées</th>
+                        <th>Victoires</th>
+                        <th>Pourcentage de victoires</th>
+                    </thead>
+                    <tbody>
+                        <tr v-for="player in players">
+                            <td>{{ player.name }}</td>
+                            <td>{{ player.games }}</td>
+                            <td>{{ player.victories }}</td>
+                            <td>{{ percent(player.games,player.victories) }}%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="historique">
+                <ul>
+                    <li v-for="item in matches">{{ item.text }}</li>
+                </ul>
+            </div>
+        
+        </div>
+    
+    <script src="js/app.js"></script>
+    </body>
+</html>
