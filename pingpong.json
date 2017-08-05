@@ -1,0 +1,45 @@
+{
+  "matches" : {
+    "1" : {
+      "text" : "abc"
+    }
+  },
+  "players" : {
+    "1" : {
+      "games" : 0,
+      "id" : 1,
+      "name" : "Massimo",
+      "victories" : 0
+    },
+    "2" : {
+      "games" : 0,
+      "id" : 2,
+      "name" : "Thomas",
+      "victories" : 0
+    },
+    "3" : {
+      "games" : 0,
+      "id" : 3,
+      "name" : "Fayçal",
+      "victories" : 0
+    },
+    "4" : {
+      "games" : 0,
+      "id" : 4,
+      "name" : "Mihai",
+      "victories" : 0
+    },
+    "5" : {
+      "games" : 0,
+      "id" : 5,
+      "name" : "Mohamed",
+      "victories" : 0
+    },
+    "6" : {
+      "games" : 0,
+      "id" : 6,
+      "name" : "Jean-Denis",
+      "victories" : 0
+    }
+  }
+}

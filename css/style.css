@@ -1,8 +1,90 @@
-body{
+body {
     margin: 0 20px;
     padding: 0;
+    background-image: url('../img/texture.jpg');
+    background-size: cover;
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+h1 {
+    text-align: center
+}
+
+h1, h2 {
+    color: lightgreen;
+    text-shadow: 1px 1px 1px black;
+}
+
+#new {
+    padding: 50px 10px;
+    border-radius: 100%;
+    border: 2px solid red;
+    color: lightgreen;
+    text-shadow: 1px 0px 1px black;
+    background-color: white;
+    font-size: 14px;
+    font-family: 'Love Ya Like A Sister', cursive;    
+}
+
+.btn {
+    padding: 5px;
+    margin: 5px 0;
+    min-width: 130px;
+    border: 2px solid red;
+    border-radius: 50%;    
+    color: green;
+    text-shadow: 1px 0px 1px white;
+    background-color: white;
+    font-size: 11px;
+    font-family: 'Love Ya Like A Sister', cursive;    
+}
+
+.btn-section {
+    padding: 20px 0;
 }
 
 table {
-    border: 1px solid black;
+    margin: auto;
+    background: rgba(255,255,255,0.5);
+}
+
+th, td {
+    height: 40px;
+    text-align: center;
+}
+
+.joueurs {
+    z-index: 40;
+    width: 20%;
+}
+
+.score {
+    width: 25px;
+}
+
+.historique {
+    color: white;
+    text-align: center;
+    background: rgba(255,255,255,0.5);    
+}
+
+ul {
+    list-style: none;
+}
+
+
+.img {
+    width: 40px;
+    right: calc(50% - 280px);
+    top: 50px;
+}
+
+svg {fill: gold}
+
+.U--relative {
+    position: relative !important;
+}
+
+.U--absolute {
+    position: absolute !important;
 }
